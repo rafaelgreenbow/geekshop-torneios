@@ -2,5 +2,4 @@
   functions = "netlify/functions"
   publish = "public"
 
-[[plugins]]
-package = "@netlify/kv"
+
