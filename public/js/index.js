@@ -22,13 +22,6 @@ async function carregarTorneios() {
             </div>
         `;
     });
-
-    if (torneios.length < 4) {
-        const faltam = 4 - torneios.length;
-        for (let i = 0; i < faltam; i++) {
-            lista.innerHTML += `<div class="event-card empty"></div>`;
-        }
-    }
 }
 
 function abrirTorneio(id) {
