@@ -11,21 +11,24 @@ async function carregarTorneios() {
 
     const torneios = result.torneios;
 
-    if (torneios.length === 0) {
-        lista.innerHTML = "<p>Nenhum torneio disponível.</p>";
-        return;
-    }
-
     lista.innerHTML = "";
 
     torneios.forEach(t => {
         lista.innerHTML += `
-            <div class="torneio-card" onclick="abrirTorneio('${t.id}')">
-                <div class="torneio-titulo">${t.nome}</div>
-                <div class="torneio-data">Data: ${t.data}</div>
+            <div class="event-card" onclick="abrirTorneio('${t.id}')">
+                <h2>${t.nome}</h2>
+                <div class="event-info">Data: ${t.data}</div>
+                <button class="btn">Detalhes</button>
             </div>
         `;
     });
+
+    if (torneios.length < 4) {
+        const faltam = 4 - torneios.length;
+        for (let i = 0; i < faltam; i++) {
+            lista.innerHTML += `<div class="event-card empty"></div>`;
+        }
+    }
 }
 
 function abrirTorneio(id) {
