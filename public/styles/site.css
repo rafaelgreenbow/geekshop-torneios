@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.home-header {
+    text-align: center;
+    padding: 30px;
+    background-color: #1b1b1b;
+    border-bottom: 1px solid #232323;
+}
+
+.torneios-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.torneio-card {
+    background-color: #1c1c1c;
+    border: 1px solid #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.torneio-card:hover {
+    border-color: #0a84ff;
+    transform: scale(1.02);
+}
+
+.torneio-titulo {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.torneio-data {
+    font-size: 14px;
+    color: #9c9c9c;
+}

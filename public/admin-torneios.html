@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Torneios</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+
+    <header class="admin-header">
+        <h1>Gerenciar Torneios</h1>
+        <button class="btn sair" onclick="logout()">Sair</button>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="event-box">
+            <h2>Cadastrar Novo Torneio</h2>
+
+            <form id="formTorneio">
+
+                <label>Nome do Torneio</label>
+                <input type="text" id="nome" required>
+
+                <label>Data</label>
+                <input type="date" id="data" required>
+
+                <button class="btn" type="submit">Cadastrar Torneio</button>
+
+                <p id="mensagem"></p>
+
+            </form>
+        </section>
+
+        <section class="inscritos-box">
+            <h2>Torneios Cadastrados</h2>
+            <div id="listaTorneios"></div>
+        </section>
+
+    </main>
+
+    <script src="js/admin-torneios.js"></script>
+</body>
+</html>

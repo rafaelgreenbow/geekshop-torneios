@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin | Geek Shop</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+
+    <header class="admin-header">
+        <h1>Painel Administrativo</h1>
+        <button class="btn sair" onclick="logout()">Sair</button>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="event-box">
+            <h2>Selecione um Evento</h2>
+
+            <select id="selectEvento" class="select-input">
+                <option value="teste-01-03">Torneio de Teste – 01/03/2026</option>
+            </select>
+
+            <button class="btn" onclick="carregarInscritos()">Carregar Inscritos</button>
+        </section>
+
+        <section id="listaInscritos" class="inscritos-box">
+            <!-- Lista será gerada pelo JS -->
+        </section>
+    <button class="btn" onclick="window.location.href='admin-torneios.html'">
+        Gerenciar Torneios
+    </button>
+    
+    </main>
+
+    <script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>
